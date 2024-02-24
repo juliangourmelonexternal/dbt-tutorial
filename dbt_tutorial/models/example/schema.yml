@@ -19,3 +19,14 @@ models:
         tests:
           - unique
           - not_null
+  
+  - name: book_loans
+    columns:
+      - name: borrow_date
+        tests:
+          - not_null
+          - expression_is_true:
+              expression: "user_id > 0"
+              fail_calc: "count(*)"
+              error_if: "count(*) > 0"
+              where: "user_id is not null"
