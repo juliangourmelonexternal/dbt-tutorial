@@ -19,7 +19,7 @@ models:
         tests:
           - unique
           - not_null
-  
+
   - name: book_loans
     columns:
       - name: borrow_date
