@@ -36,6 +36,7 @@ steps:
 
 - script: |
     source venv/bin/activate
+    cd ./dbt_tutorial
     dbt deps
     dbt test
   displayName: 'Run dbt tests'
