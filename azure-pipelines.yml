@@ -35,6 +35,7 @@ steps:
   displayName: 'Run pre-commit checks'
 
 - script: |
+    source venv/bin/activate
     dbt deps
     dbt test
   displayName: 'Run dbt tests'
