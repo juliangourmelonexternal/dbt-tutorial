@@ -33,3 +33,8 @@ steps:
     pre-commit install
     pre-commit run --all-files
   displayName: 'Run pre-commit checks'
+
+- script: |
+    dbt deps
+    dbt test
+  displayName: 'Run dbt tests'
