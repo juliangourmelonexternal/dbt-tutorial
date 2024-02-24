@@ -17,3 +17,19 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- script: |
+    echo "Starting Azure DevOps pipeline for dbt project..."
+    sudo apt-get update
+    sudo apt-get install -y python3-pip python3-venv
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install --upgrade pip
+    pip install dbt pre-commit
+  displayName: 'Install dependencies'
+
+- script: |
+    source venv/bin/activate
+    pre-commit install
+    pre-commit run --all-files
+  displayName: 'Run pre-commit checks'
