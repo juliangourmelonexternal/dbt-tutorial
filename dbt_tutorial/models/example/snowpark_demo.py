@@ -3,6 +3,6 @@ def model(dbt, session):
     dbt.config(materialized = "table")
 
     # DataFrame representing an upstream model
-    df = dbt.ref("my_first_dbt_model")
+    df = dbt.ref("book_loans")
  
     return df
