@@ -30,9 +30,9 @@ jobs:
 
       - name: Set up dbt profile
         run: |
-          mkdir -p ~/.dbt
-          echo "$DBT_PROFILE_CONTENTS" > ~/.dbt/profiles.yml
-          cat ~/.dbt/profiles.yml
+          mkdir -p /home/runner/.dbt
+          echo "$DBT_PROFILE_CONTENTS" > /home/runner/.dbt/profiles.yml
+          cat /home/runner/.dbt/profiles.yml
         env:
           DBT_PROFILE_CONTENTS: ${{ secrets.DBT_PROFILE_CONTENTS }}
 
