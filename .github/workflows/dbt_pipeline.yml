@@ -32,6 +32,7 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           echo "$DBT_PROFILE_CONTENTS" > ~/.dbt/profiles.yml
+          cat ~/.dbt/profiles.yml
         env:
           DBT_PROFILE_CONTENTS: ${{ secrets.DBT_PROFILE_CONTENTS }}
 
