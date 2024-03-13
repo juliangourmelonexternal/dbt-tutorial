@@ -52,7 +52,7 @@ Runtime Error
 Runtime Error
   No dbt_project.yml found at expected path C:\Users\JulianGourmelon-aret\OneDrive - areto consulting gmbh\Dokumente\dbt_test\dbt-tutorial\dbt_project.yml
   Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
-  
+
 [0m13:14:11.079231 [debug] [MainThread]: Command `dbt test` failed at 13:14:11.079231 after 0.11 seconds
 [0m13:14:11.080475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D97EDCD310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D97EDCC390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D977F8DA90>]}
 [0m13:14:11.081483 [debug] [MainThread]: Flushing usage events
@@ -66,7 +66,7 @@ Runtime Error
 Runtime Error
   No dbt_project.yml found at expected path C:\Users\JulianGourmelon-aret\OneDrive - areto consulting gmbh\Dokumente\dbt_test\dbt-tutorial\dbt_project.yml
   Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
-  
+
 [0m17:03:07.291146 [debug] [MainThread]: Command `dbt deps` failed at 17:03:07.291146 after 0.06 seconds
 [0m17:03:07.292461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED3A46AD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED4133D350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED4133CCD0>]}
 [0m17:03:07.293682 [debug] [MainThread]: Flushing usage events

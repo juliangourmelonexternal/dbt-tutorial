@@ -4,5 +4,5 @@ def model(dbt, session):
 
     # DataFrame representing an upstream model
     df = dbt.ref("book_loans")
- 
+
     return df
