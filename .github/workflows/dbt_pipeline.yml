@@ -28,6 +28,13 @@ jobs:
           pre-commit install
           pre-commit run --all-files
 
+      - name: Set up dbt profile
+        run: |
+          mkdir -p ~/.dbt
+          echo "$DBT_PROFILE_CONTENTS" > ~/.dbt/profiles.yml
+        env:
+          DBT_PROFILE_CONTENTS: ${{ secrets.DBT_PROFILE_CONTENTS }}
+
       - name: Run dbt tests
         run: |
           source venv/bin/activate
