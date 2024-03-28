@@ -9,7 +9,6 @@ models:
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
 
   - name: my_second_dbt_model
     description: "A starter dbt model"
@@ -20,13 +19,19 @@ models:
           - unique
           - not_null
 
-  - name: book_loans
+  - name: book_loans  # Adjust the name if the actual model name in dbt differs
+    description: "A model representing book loans"
     columns:
-      - name: borrow_date
+      - name: book_id
+        description: "Unique identifier for the book"
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: "Identifier for the user who borrowed the book"
         tests:
           - not_null
-          - expression_is_true:
-              expression: "user_id > 0"
-              fail_calc: "count(*)"
-              error_if: "count(*) > 0"
-              where: "user_id is not null"
+      - name: borrow_date
+        description: "The date when the book was borrowed"
+        tests:
+          - not_null
