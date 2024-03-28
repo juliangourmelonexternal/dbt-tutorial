@@ -35,3 +35,6 @@ models:
         description: "The date when the book was borrowed"
         tests:
           - not_null
+      - name: not_future_date
+        args:
+          field_name: borrow_date

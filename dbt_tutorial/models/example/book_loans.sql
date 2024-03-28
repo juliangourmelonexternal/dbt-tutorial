@@ -6,7 +6,7 @@ WITH book_loans AS (
     UNION ALL
     SELECT 2, 102, '2024-01-05'
     UNION ALL
-    SELECT 3, 103, '2024-02-01'
+    SELECT 3, 103, '2024-02-02'
     UNION ALL
     SELECT 4, 104, '2024-02-15'
     UNION ALL
